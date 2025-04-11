@@ -1,0 +1,142 @@
+/* style.css */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #1a1a40, #1e90ff);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  h1 {
+    margin-bottom: 10px;
+    font-size: 3rem;
+    letter-spacing: 2px;
+  }
+  
+  p {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+  }
+  .difficulty-container {
+    margin: 20px auto;
+    text-align: center;
+  }
+  
+  #difficulty {
+    padding: 5px 10px;
+    font-size: 16px;
+  }
+  .container {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .grafik {
+    stroke: white;
+    stroke-width: 4px;
+    width: 250px;
+    height: 250px;
+  }
+  
+  .item {
+    display: none;
+    stroke: crimson;
+  }
+  
+  #word {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    font-size: 2.5rem;
+    justify-content: center;
+  }
+  
+  .letter {
+    border-bottom: 3px solid #fff;
+    min-width: 30px;
+    text-align: center;
+  }
+  
+  #wrong-letters {
+    margin-top: 20px;
+    color: #ff6f61;
+    font-weight: bold;
+  }
+  
+  #wrong-letters h3 {
+    margin-bottom: 10px;
+  }
+  
+  #popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popup {
+    background-color: #333;
+    padding: 30px 40px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .popup h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .popup button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: #00b894;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .popup button:hover {
+    background: #019875;
+  }
+  
+  #message {
+    position: absolute;
+    bottom: 20px;
+    background: #ff7675;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: none;
+  }
+  
+  #message.show {
+    display: block;
+    animation: fade 2s ease-in-out;
+  }
+  
+  @keyframes fade {
+    0% { opacity: 0; transform: translateY(20px); }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; transform: translateY(20px); }
+  }
+  
